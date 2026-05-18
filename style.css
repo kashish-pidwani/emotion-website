@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f172a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+h1 {
+    color: #4CAF50;
+    font-size: 42px;
+}
+
+.subtitle {
+    color: #cbd5e1;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+input[type="file"] {
+    padding: 10px;
+    color: white;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.preview-section img {
+    margin-top: 25px;
+    width: 240px;
+    border-radius: 15px;
+    display: none;
+    border: 3px solid #4CAF50;
+}
+
+.result-box {
+    margin-top: 40px;
+}
+
+.image-result-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.image-card,
+.prediction-card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 15px;
+    width: 320px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.4);
+}
+
+.image-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.emotion {
+    font-size: 34px;
+    color: #4CAF50;
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.confidence {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #e2e8f0;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection AI</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>😊 Emotion Detection AI</h1>
+
+    <p class="subtitle">
+        Upload an image and detect human emotions using AI
+    </p>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="image" required>
+
+        <br><br>
+
+        <button type="submit">
+            Predict Emotion
+        </button>
+
+    </form>
+
+    {% if result %}
+    <div class="result-box">
+
+        <div class="image-result-container">
+
+            <!-- Uploaded Image -->
+            <div class="image-card">
+
+                <h3>Uploaded Image</h3>
+
+                <img 
+                    src="data:image/png;base64,{{ image_data }}" 
+                    alt="Uploaded Image"
+                >
+
+            </div>
+
+            <!-- Prediction -->
+            <div class="prediction-card">
+
+                <h3>Prediction Result</h3>
+
+                <div class="emotion">
+                    {{ emoji }} {{ result }}
+                </div>
+
+                <div class="confidence">
+                    Confidence: {{ confidence }}%
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
